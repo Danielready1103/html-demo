@@ -24,6 +24,33 @@
             width: 70%;
             height: 300px;
             margin: 0 auto;
+            text-align: center;
+            border: #365486 2px solid;
+        }
+
+        form {
+            background-color: #F1E4C3;
+            color: black;
+            padding: 12px 0;
+            border-radius: 20px;
+            border: #C6A969 3px solid;
+            margin-top: 6px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        input,
+        textarea,
+        label,
+        button {
+            margin: 12px 0px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #C1F2B0;
+            border-radius: 20px;
         }
 
         .title {
@@ -56,6 +83,14 @@
             width: 30%;
         }
 
+        .table_head {
+            background-color: #86B6F6;
+        }
+
+        .table_body {
+            background-color: #EEF5FF;
+        }
+
         #info {
             background-color: #e0af19;
             padding: 10px;
@@ -69,6 +104,16 @@
             text-align: center;
             background-color: #AAD9BB;
             padding: 8px 0;
+        }
+
+        #video {
+            text-align: center;
+            padding: 1px;
+            border: #E6BAA3 2px
+        }
+
+        #post-form {
+            text-align: center;
         }
     </style>
 </head>
@@ -135,7 +180,7 @@
         <hr>
         <div class="sub-title">一天所需卡路里</div>
         <table border="3">
-            <thead>
+            <thead class="table_head">
                 <tr>
                     <th>每天活動量</th>
                     <th>體重過輕者所需熱量</th>
@@ -144,7 +189,7 @@
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody class="table_body">
                 <tr>
                     <td>輕度工作</td>
                     <td>35大卡 X 目前體重（公斤）</td>
@@ -171,32 +216,37 @@
 
         <hr>
         <div class="sub-title">健身影片</div>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/MzLZXUnekuI"
-            title="健身房新手【4天練全身課表】每天只做CP值最高的三個精華動作！│健人訓練│ 2021ep31" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/_rp6OqtbVR0"
-            title="20分鐘 站立式腹肌訓練 收腹塑造人魚線小蠻腰  ~ Emi" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+        <div id="video">
+            <iframe width="45%" height="500" src="https://www.youtube.com/embed/MzLZXUnekuI"
+                title="健身房新手【4天練全身課表】每天只做CP值最高的三個精華動作！│健人訓練│ 2021ep31" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="45%" height="500" src="https://www.youtube.com/embed/_rp6OqtbVR0"
+                title="20分鐘 站立式腹肌訓練 收腹塑造人魚線小蠻腰  ~ Emi" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
         <div class="sub-title">本地端影片</div>
         <video src="video/file_example_MP4_640_3MG.mp4" controls></video>
         <hr>
-        <h2>表單填寫</h2>
-        <h3>需要更多健身資訊，請填寫以下表單</h3>
-        <form action="">
-            <label for="email">Email:&nbsp;</label>
-            <input type="email" id="email" name="email" placeholder="請輸入Email" required>
-            <br>
-            <label for="password">密碼:&nbsp;&nbsp;</label>
-            <input type="password" id="password" name="password" placeholder="請輸入密碼" required>
-            <br>
-            <label for="information">寶貴的建議</label><br>
-            <textarea id="information" name="information" cols="30" rows="30"></textarea>
-            <p>
-                <button type="submit">Login</button>
-            </p>
-        </form>
+        <div id="post-form">
+            <h2>表單填寫</h2>
+            <h3>需要更多健身資訊，請填寫以下表單</h3>
+            <form action="">
+                <label for="email">Email:&nbsp;</label>
+                <input type="email" id="email" name="email" placeholder="請輸入Email" required>
+                <br>
+                <label for="password">密碼:&nbsp;&nbsp;</label>
+                <input type="password" id="password" name="password" placeholder="請輸入密碼" required>
+                <br><br>
+                <label for="information">寶貴的建議</label><br>
+                <textarea id="information" name="information" cols="80" rows="30"></textarea>
+                <p>
+                    <button type="submit">登入</button>
+                    <button type="reset" style="background-color:rosybrown;">清除</button>
+                </p>
+            </form>
+        </div>
     </div>
 </body>
 
